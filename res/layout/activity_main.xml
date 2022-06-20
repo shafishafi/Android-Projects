@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/labellat"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Lat:"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_lat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="0.00"
+            android:layout_toEndOf="@+id/labellat"/>
+
+        <TextView
+            android:id="@+id/labellon"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Lon:"
+            android:layout_marginStart="10dp"
+            android:layout_below="@+id/labellat"/>
+
+        <TextView
+            android:id="@+id/tv_lon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="0.00"
+            android:layout_below="@+id/tv_lat"
+            android:layout_toEndOf="@+id/labellon"/>
+
+        <TextView
+            android:id="@+id/labelaltitude"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Altitude:"
+            android:layout_marginStart="10dp"
+            android:layout_below="@+id/labellon"/>
+
+        <TextView
+            android:id="@+id/tv_altitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="0.00"
+            android:layout_below="@+id/tv_lon"
+            android:layout_toEndOf="@+id/labelaltitude"/>
+
+        <TextView
+            android:id="@+id/labelaccuracy"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Accuracy:"
+            android:layout_marginStart="10dp"
+            android:layout_below="@+id/labelaltitude"/>
+
+        <TextView
+            android:id="@+id/tv_accuracy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="0.00"
+            android:layout_below="@+id/tv_altitude"
+            android:layout_toEndOf="@+id/labelaccuracy"/>
+
+        <TextView
+            android:id="@+id/labelspeed"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Speed:"
+            android:layout_marginStart="10dp"
+            android:layout_below="@+id/labelaccuracy"/>
+
+        <TextView
+            android:id="@+id/tv_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="0.00"
+            android:layout_below="@+id/tv_accuracy"
+            android:layout_toEndOf="@+id/labelspeed"/>
+
+        <TextView
+            android:id="@+id/labeladdress"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/labelspeed"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:text="Steps:"
+            />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="10"
+            android:layout_below="@+id/tv_speed"
+
+            android:layout_toEndOf="@+id/labeladdress"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="32dp"
+            android:layout_below="@id/tv_address"
+            android:background="?android:listDivider"/>
+
+        <Switch
+            android:id="@+id/sw_locationsupdates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:checked="true"
+            android:text="Location Updates" />
+
+        <TextView
+            android:id="@+id/labelupdates"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sw_locationsupdates"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:text="Updates:" />
+
+        <TextView
+            android:id="@+id/tv_updates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sw_locationsupdates"
+            android:layout_marginTop="16dp"
+            android:layout_toEndOf="@+id/labelupdates"
+            android:text="off" />
+
+        <Switch
+            android:id="@+id/sw_gps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_updates"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:checked="false"
+            android:visibility="invisible"
+            android:text="GPS/SavePower" />
+
+        <TextView
+            android:id="@+id/labelsensor"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sw_gps"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:visibility="invisible"
+            android:text="Sensor:" />
+
+        <TextView
+            android:id="@+id/tv_sensor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_below="@+id/sw_gps"
+            android:layout_marginTop="16dp"
+            android:layout_toEndOf="@+id/labelsensor"
+            android:text="Cell Tower + Wifi" />
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
